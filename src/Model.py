@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[ ]:
-
-
 import pandas as pd
 from statsmodels.tsa.arima.model import ARIMA
 
