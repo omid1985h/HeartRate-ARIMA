@@ -1,7 +1,7 @@
 import pandas as pd
 from statsmodels.tsa.arima.model import ARIMA
 
-def train_arima_model(series: pd.Series, order=(2,1,2)):
+def train_arima_model(series: pd.Series, order=(2,0,2)):
     """
     Fit an ARIMA model to a time series.
 

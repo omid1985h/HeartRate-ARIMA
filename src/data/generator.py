@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 from pathlib import Path
 
-def generate_synthetic_hr(duration_mins=1440, base_hr=70, noise_std=2, trend_slope=0.001):
+def generate_synthetic_hr(duration_mins=1440, base_hr=70, noise_std=2, trend_slope=0.0005):
     """
     Generate synthetic heart rate (HR) time series data.
 
@@ -18,7 +18,7 @@ def generate_synthetic_hr(duration_mins=1440, base_hr=70, noise_std=2, trend_slo
     """
     np.random.seed(42)
 
-    timestamps = pd.date_range(start='2024-01-01', periods=duration_mins, freq='T')
+    timestamps = pd.date_range(start='2024-01-01', periods=duration_mins, freq='min')
 
     # Linear trend component
     trend = trend_slope * np.arange(duration_mins)

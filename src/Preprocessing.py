@@ -4,13 +4,13 @@ import seaborn as sns
 from statsmodels.tsa.stattools import adfuller
 from statsmodels.graphics.tsaplots import plot_acf, plot_pacf
 
-def preprocess_hr_simple(df: pd.DataFrame, resample_rule="5T", fillna_method="ffill"):
+def preprocess_hr(df: pd.DataFrame, resample_rule="5min", fillna_method="ffill"):
     """
     Preprocess heart rate data by resampling with mean and filling missing values.
 
     Args:
         df (pd.DataFrame): Input HR data indexed by timestamp.
-        resample_rule (str): Pandas resampling frequency (e.g., '5T' for 5 minutes).
+        resample_rule (str): Pandas resampling frequency (e.g., '5min' for 5 minutes).
         fillna_method (str): Method to fill missing values ('ffill', 'bfill', etc.).
 
     Returns:

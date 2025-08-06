@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+import seaborn as sns
 from sklearn.metrics import mean_squared_error
 import scipy.stats as stats
 from statsmodels.graphics.tsaplots import plot_acf
