@@ -27,6 +27,10 @@ if __name__ == "__main__":
 
     # Train
     model = train_arima_model(train["heart_rate"], order=(6,0,6))
+    print(f"AIC: {model.aic}")
+    print(f"BIC: {model.bic}")
+    print(f"Log Likelihood: {model.llf}")
+
 
     # Forecast
     forecast = forecast_arima(model, steps=len(test))
